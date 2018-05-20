@@ -1,0 +1,31 @@
+S -> bS'
+S' -> aS' | $
+
+S -> cdS'
+S' -> $ | abS'
+
+S -> aS' | (S)S'
+S' -> $ | ∪SS' | SS' | *S'
+
+rprimary -> a | b
+rexpr -> rtermrexpr'
+rexpr' -> $ | Urtermrexpr'
+rterm -> rfactorrterm'
+rterm' -> $ | rfactorrterm'
+rfactor -> rprimaryrfactor'
+rfactor' -> $ | *rfactor'
+
+A -> 0 | T1
+T -> 1T' | 00T'
+T' -> $ | 10T'
+
+A -> BC | C
+B -> bB'
+B' -> $ | bB'
+C -> aC' | bB'CCC'
+C' -> $ | CC'
+
+S -> Aa | b | a
+A -> adA' | bdA' | cA'
+A' -> adA' | $ | cA'
+

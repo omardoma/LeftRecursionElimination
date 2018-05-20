@@ -1,0 +1,21 @@
+S -> Sa | b
+
+S -> Sab | cd
+
+S -> S∪S | SS | S* | (S) | a
+
+rexpr -> rexpr Urterm | rterm
+rterm -> rterm rfactor | rfactor
+rfactor -> rfactor* | rprimary
+rprimary -> a | b
+
+A -> 0 | T1
+T -> 1 | A0
+
+A -> BC
+B -> Bb | $
+C -> AC | a
+
+S -> Aa | b
+A -> Ac | Sd | $
+
